@@ -23,7 +23,7 @@ public class MapActivity extends AppCompatActivity {
         MapKitFactory.initialize(this);
 
         // Укажите имя activity вместо map.
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_map);
         mapview = (MapView)findViewById(R.id.mapview);
         mapview.getMap().move(
                 new CameraPosition(new Point(55.751574, 37.573856), 11.0f, 0.0f, 0.0f),
