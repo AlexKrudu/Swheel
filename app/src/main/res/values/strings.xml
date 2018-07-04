@@ -15,22 +15,13 @@
     <string name="Sex">Пол</string>
     <string name="Male">Мужской</string>
     <string name="Female">Женский</string>
-
+    <string name="Next">Далее</string>
     <string name="Age">Возраст</string>
-    <string-array name="Ages">
-        <item>0-4</item>
-        <item>5-9</item>
-        <item>10-14</item>
-        <item>15-18</item>
-        <item>19-24</item>
-        <item>25-30</item>
-        <item>31-35</item>
-        <item>36-45</item>
-        <item>45-60</item>
-        <item>60+</item>
-    </string-array>
-
+    <string name="PersonalData">О себе</string>
+    <string name="Name">Имя</string>
+    <string name="Surname">Фамилия</string>
 
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_register2">Register2Activity</string>
 
 </resources>
