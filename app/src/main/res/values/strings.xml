@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Swheel</string>
+    <string name="button">Button</string>
+    <string name="button1">Button</string>
+    <string name="textview">TextView</string>
+    <string name="Signing">SIGN IN</string>
+    <string name="Login">Логин</string>
+    <string name="Password">Пароль</string>
+    <string name="Reset">Восстановить пароль</string>
+    <string name="Register">Зарегистрироваться</string>
+    <string name="Registration">Регистрация</string>
+    <string name="Logging">Войти</string>
+    <string name="AnotherPword">Пароль еще раз</string>
+    <string name="Email">Ваш Email</string>
+    <string name="Sex">Пол</string>
+    <string name="Male">Мужской</string>
+    <string name="Female">Женский</string>
+
+    <string name="Age">Возраст</string>
+    <string-array name="Ages">
+        <item>0-4</item>
+        <item>5-9</item>
+        <item>10-14</item>
+        <item>15-18</item>
+        <item>19-24</item>
+        <item>25-30</item>
+        <item>31-35</item>
+        <item>36-45</item>
+        <item>45-60</item>
+        <item>60+</item>
+    </string-array>
+
+
+    <string name="title_activity_register">RegisterActivity</string>
+
 </resources>
