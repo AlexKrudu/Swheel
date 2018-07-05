@@ -17,6 +17,8 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/AnotherPword"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,13 +37,15 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/Login"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <EditText
         android:id="@+id/editText5"
@@ -52,6 +56,8 @@
         android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/Password"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,10 +72,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:textColor="#2b2c2c"
         android:text="@string/Registration"
-        android:textSize="36dp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,6 +91,8 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/Email"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -97,6 +108,8 @@
         android:layout_marginStart="8dp"
         android:onClick="submittionClick"
         android:text="@string/Next"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:background="#00c4ab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

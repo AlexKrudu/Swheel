@@ -266,9 +266,14 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/circle"
         android:text=""
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_image" />
 
 </android.support.constraint.ConstraintLayout>
