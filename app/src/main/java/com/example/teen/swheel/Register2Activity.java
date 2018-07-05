@@ -42,6 +42,8 @@ public class Register2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         login = getIntent().getStringExtra("login");
 
         person = db.personDao().getByLogin(login);

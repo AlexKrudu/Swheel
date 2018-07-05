@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             signin.setText("Неправильный пароль!");
         }
 
-        Intent intent = new Intent(MainActivity.this, MapActivity.class);
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        intent.putExtra("login", login.getText().toString());
         startActivity(intent);
     }
 }
