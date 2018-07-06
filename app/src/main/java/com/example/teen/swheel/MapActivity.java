@@ -1,7 +1,9 @@
 package com.example.teen.swheel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKitFactory;
@@ -22,6 +24,7 @@ public class MapActivity extends AppCompatActivity {
         MapKitFactory.setApiKey("59ac5e3f-0809-43e6-90be-94f6c4ec8742");
         MapKitFactory.initialize(this);
 
+
         // Укажите имя activity вместо map.
         setContentView(R.layout.activity_map);
         mapview = (MapView)findViewById(R.id.mapview);
@@ -30,6 +33,13 @@ public class MapActivity extends AppCompatActivity {
                 new Animation(Animation.Type.SMOOTH, 0),
                 null);
     }
+
+    public void OpenMenu(View v){
+        Intent intent = new Intent(MapActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
+
     @Override
     protected void onStop() {
         // Activity onStop call must be passed to both MapView and MapKit instance.
