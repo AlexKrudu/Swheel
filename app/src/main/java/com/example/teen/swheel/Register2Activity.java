@@ -37,6 +37,8 @@ public class Register2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 name = editName.getText().toString();
                 surname = editSurname.getText().toString();
+                person.setName(name);
+                person.setSurname(surname);
                 db.personDao().update(person);
                 Intent intent = new Intent(Register2Activity.this, MainActivity.class);
                 startActivity(intent);
@@ -57,9 +59,7 @@ public class Register2Activity extends AppCompatActivity {
             // Описываем метод выбора даты в календаре:
             @Override
             public void onSelectedDayChange(CalendarView view, int year,int month, int dayOfMonth) {
-                person.setName(name);
-                person.setSurname(surname);
-                person.setYear(year);
+                person.setYear(2018 - year);
                 person.setMonth(month);
                 person.setDay(dayOfMonth);
             }});
