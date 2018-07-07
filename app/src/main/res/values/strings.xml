@@ -25,7 +25,7 @@
     <string name="title_activity_register2">Register2Activity</string>
     <string name="_age">24 года</string>
     <string name="_agePrefix">Возраст:</string>
-    <string name="_description">Самость возможна. Действие, как бы это ни казалось парадоксальным</string>
+    <string name="_description">Простой парень, веселый, умный, скромный</string>
     <string name="_descriptionPrefix">О себе:</string>
     <string name="_surname">Малютин</string>
     <string name="_name">Андрей</string>
@@ -37,5 +37,13 @@
     <string name="_vehiclesPrefix">Вид транспорта:</string>
     <string name="_greenButton">Написать сообщение</string>
     <string name="_underGreenButtonText">Заблокировать пользователя</string>
+    <string name="title_activity_nav_menu">NavMenuActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

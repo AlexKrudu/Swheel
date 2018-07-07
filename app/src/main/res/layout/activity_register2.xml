@@ -15,7 +15,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PersonalData"
-        android:textSize="36dp"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:textColor="#2b2c2c"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +31,8 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/Name"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -44,6 +48,8 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/Surname"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +63,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/Age"
+        android:fontFamily="@font/roboto_bold"
+        android:textColorHint="#4c4c4c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText9" />
@@ -69,8 +77,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <Button
         android:id="@+id/button2"
@@ -79,10 +88,14 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="#00c4ab"
+        android:fontFamily="@font/roboto_slab_bold"
         android:text="@string/Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.428" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,24 +1,17 @@
 package com.example.teen.swheel;
-
 import android.arch.persistence.room.Room;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
-
+import android.view.View;
 import com.yandex.mapkit.MapKitFactory;
-import com.yandex.mapkit.geometry.Geometry;
 import com.yandex.mapkit.geometry.Point;
-import com.yandex.mapkit.geometry.geo.XYPoint;
 import com.yandex.mapkit.layers.ObjectEvent;
 import com.yandex.mapkit.map.CameraPosition;
-import com.yandex.mapkit.map.IconStyle;
 import com.yandex.mapkit.map.MapObject;
 import com.yandex.mapkit.map.MapObjectCollection;
 import com.yandex.mapkit.map.MapObjectTapListener;
-import com.yandex.mapkit.map.Rect;
 import com.yandex.mapkit.mapview.MapView;
 import com.yandex.mapkit.user_location.UserLocationLayer;
 import com.yandex.mapkit.user_location.UserLocationObjectListener;
@@ -58,6 +51,7 @@ public class MapActivity extends AppCompatActivity implements UserLocationObject
         setContentView(R.layout.activity_map);
 
 
+
         // Укажите имя activity вместо map.
         final Random random = new Random();
         mapview = findViewById(R.id.mapview);
@@ -86,6 +80,11 @@ public class MapActivity extends AppCompatActivity implements UserLocationObject
         userLocationLayer.setHeadingEnabled(true);
 
         userLocationLayer.setObjectListener(this);
+    }
+
+    public void onClick(View v){
+        Intent intent = new Intent(MapActivity.this, MenuActivity.class);
+        startActivity(intent);
     }
 
     @Override
