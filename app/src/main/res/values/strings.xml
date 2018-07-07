@@ -45,5 +45,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="_save">Сохранить</string>
+    <string name="delete_account">Удалить аккаунт</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="change_email">Изменить почту</string>
 
 </resources>
