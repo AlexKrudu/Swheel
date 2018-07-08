@@ -1,8 +1,11 @@
 package com.example.teen.swheel;
 
 import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -29,10 +32,34 @@ public class ProfileActivity extends AppCompatActivity {
         YearView.setText(String.valueOf(year) + " года");
 
 
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (Integer.parseInt(android.os.Build.VERSION.SDK) > 5
+                && keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            Log.d("CDA", "onKeyDown Called");
+            onBackPressed();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 
+    @Override
+    public void onBackPressed() {
+        Log.d("CDA", "onBackPressed Called");
+        Intent intent = new Intent(ProfileActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }
+    public void backClick(View view) {
+        Intent intent = new Intent(ProfileActivity.this, MapsActivity.class);
+        startActivity(intent);
     }
 
     public void onClick(View view) {
+
     }
+
+
 }

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             if (person.password.equals(password.getText().toString())) {
                 signin.setText("Успешный вход!");
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 //intent.putExtra("login", login.getText().toString());
                 startActivity(intent);
             } else {

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import com.yandex.mapkit.MapKitFactory;
 import com.yandex.mapkit.geometry.Point;
@@ -17,6 +18,11 @@ import com.yandex.mapkit.user_location.UserLocationLayer;
 import com.yandex.mapkit.user_location.UserLocationObjectListener;
 import com.yandex.mapkit.user_location.UserLocationView;
 import com.yandex.runtime.image.ImageProvider;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import java.util.Random;
 
@@ -62,9 +68,11 @@ public class MapActivity extends AppCompatActivity implements UserLocationObject
             Point point = new Point(lattitudes[i], longitudes[i]);
             mapObjects.addPlacemark(point, ImageProvider.fromResource(this, R.drawable.user_1337));
         }
+
         mapObjects.addTapListener(new MapObjectTapListener() {
             @Override
             public boolean onMapObjectTap(MapObject mapObject, Point point) {
+                Log.d("on listen:", "listner: " + "called");
                 Intent intent = new Intent(MapActivity.this, ProfileActivity.class);
                 String bullshit = names[random.nextInt(8) + 1];
                 intent.putExtra("name", bullshit);
@@ -90,6 +98,7 @@ public class MapActivity extends AppCompatActivity implements UserLocationObject
     @Override
     protected void onStop() {
         // Activity onStop call must be passed to both MapView and MapKit instance.
+        Log.d("on stop:", "onStop: " + "called");
         mapview.onStop();
         MapKitFactory.getInstance().onStop();
         super.onStop();
@@ -98,6 +107,8 @@ public class MapActivity extends AppCompatActivity implements UserLocationObject
     @Override
     protected void onStart() {
         // Activity onStart call must be passed to both MapView and MapKit instance.
+        Log.d("on start:", "start: " + "called");
+
         super.onStart();
         MapKitFactory.getInstance().onStart();
         mapview.onStart();

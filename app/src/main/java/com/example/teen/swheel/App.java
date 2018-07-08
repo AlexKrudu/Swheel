@@ -11,6 +11,7 @@ public class App extends Application {
 
     @Override
     public void onCreate() {
+        //Class.forName("com.mysql.jdbc.Driver");
         super.onCreate();
         instance = this;
         database = Room.databaseBuilder(this, AppDatabase.class, "database")

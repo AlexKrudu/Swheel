@@ -7,8 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 
 public class RegisterActivity extends AppCompatActivity {
+    // JDBC URL, username and password of MySQL server
+    private static final String url = "jdbc:mysql://185.221.153.250:3306/swheel";
+    private static final String user = "root";
+    private static final String password = "Q1Kvvh$efg1";
+
+    // JDBC variables for opening and managing connection
+    private static Connection con;
+    private static Statement stmt;
+    private static ResultSet rs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
     public void submittionClick(View v)
     {
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "swheeldb").allowMainThreadQueries().build();
-//        AppDatabase db = App.getInstance().getDatabase();
-
         PersonDao personDao = db.personDao();
         Person person = new Person();
         EditText login =  (EditText) findViewById(R.id.editText3);
