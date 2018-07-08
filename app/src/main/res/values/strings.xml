@@ -49,5 +49,7 @@
     <string name="delete_account">Удалить аккаунт</string>
     <string name="change_password">Изменить пароль</string>
     <string name="change_email">Изменить почту</string>
+    <string name="_next">Далее</string>
+    <string name="_login">Войти</string>
 
 </resources>

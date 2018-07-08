@@ -132,7 +132,7 @@
         android:focusable="true"
         android:fontFamily="@font/roboto_slab_bold"
         android:onClick="button_click"
-        android:text="Войти"
+        android:text="@string/_login"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"

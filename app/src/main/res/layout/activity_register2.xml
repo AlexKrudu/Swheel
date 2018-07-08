@@ -7,6 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".Register2Activity">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="237dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="237dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:srcCompat="@drawable/rectangle" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -28,12 +54,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
         android:ems="10"
-        android:hint="@string/Name"
         android:fontFamily="@font/roboto_bold"
-        android:textColorHint="#4c4c4c"
+        android:hint="@string/Name"
         android:inputType="textPersonName"
+        android:textColorHint="#4c4c4c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +72,15 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
         android:ems="10"
-        android:hint="@string/Surname"
         android:fontFamily="@font/roboto_bold"
-        android:textColorHint="#4c4c4c"
+        android:hint="@string/Surname"
         android:inputType="textPersonName"
+        android:textColorHint="#4c4c4c"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
@@ -61,9 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/Age"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/roboto_bold"
+        android:text="@string/Age"
         android:textColorHint="#4c4c4c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,13 +100,12 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="301dp"
-        android:layout_height="289dp"
+        android:layout_width="278dp"
+        android:layout_height="224dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
@@ -97,5 +125,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
         app:layout_constraintVertical_bias="0.428" />
+
 
 </android.support.constraint.ConstraintLayout>
