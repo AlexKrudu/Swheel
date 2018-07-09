@@ -47,7 +47,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.List;
 import java.util.Random;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MapsActivity extends AppCompatActivity  implements OnMarkerClickListener,
         OnInfoWindowClickListener,
@@ -100,6 +104,15 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
     private String[] mLikelyPlaceAddresses;
     private String[] mLikelyPlaceAttributions;
     private LatLng[] mLikelyPlaceLatLngs;
+    private List<RegistrationResp> regresp;
+    private List<RegistrationSend> regsend;
+    private List<SigningResp> sigresp;
+    private List<SigningSend> sigsend;
+    private List<GetCoords> getcrds;
+    private List<PutCoords> putcrds;
+    public static PersonApi personApi;
+
+
     final String[] names = {"Василий", "Александр", "Иван", "Ефрем", "Сергей", "Даниил", "Валерий", "Владислав"};
     String[] surnames = {"Петров", "Иванов", "Сергеев", "Пупкин", "Петряев", "Данилов", "Митрофанов", "Коновалов"};
     double[] lattitudes = {53.238921, 53.225325, 53.213785, 53.210076, 53.204098, 53.198738, 53.188532, 53.197810};
@@ -107,9 +120,14 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
 
 
 
-
+    public void dotsClick(View view){
+        Intent intent = new Intent(MapsActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        personApi = Controller.getApi();
+
         super.onCreate(savedInstanceState);
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "swheeldb").allowMainThreadQueries().build();
         RandomPersonDao randomPersonDao = db.randomPersonDao();

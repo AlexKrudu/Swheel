@@ -17,7 +17,7 @@ public class ProfileEditActivity extends AppCompatActivity {
     }
 
     public void openMap(View view) {
-        Intent intent = new Intent(ProfileEditActivity.this, MapActivity.class);
+        Intent intent = new Intent(ProfileEditActivity.this, MapsActivity.class);
         startActivity(intent);
     }
 
