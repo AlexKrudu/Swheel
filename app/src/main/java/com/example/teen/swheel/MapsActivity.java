@@ -118,12 +118,11 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
     double[] lattitudes = {53.238921, 53.225325, 53.213785, 53.210076, 53.204098, 53.198738, 53.188532, 53.197810};
     double[] longitudes = {44.956853, 44.978483, 44.999082, 45.011270, 45.026290, 45.036805, 45.043521, 45.048241};
 
-
-
     public void dotsClick(View view){
         Intent intent = new Intent(MapsActivity.this, MenuActivity.class);
         startActivity(intent);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         personApi = Controller.getApi();
