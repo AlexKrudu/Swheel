@@ -8,18 +8,15 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -30,14 +27,12 @@ import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowCloseListener;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowLongClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerDragListener;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -59,19 +54,6 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
         SeekBar.OnSeekBarChangeListener,
         OnInfoWindowLongClickListener,
         OnInfoWindowCloseListener, OnMapReadyCallback {
-        //OnMapAndViewReadyListener.OnGlobalLayoutAndMapReadyListener  {
-
-    private Marker melbourne;
-    private Marker mPerth;
-    private Marker mSydney;
-    private Marker mBrisbane;
-
-    private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
-
-    private static final LatLng PERTH = new LatLng(-31.952854, 115.857342);
-
-    private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
-
     private static final String TAG = MapsActivity.class.getSimpleName();
     private GoogleMap mMap;
     private CameraPosition mCameraPosition;
@@ -110,7 +92,6 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
     private List<SigningSend> sigsend;
     private List<GetCoords> getcrds;
     private List<PutCoords> putcrds;
-    public static PersonApi personApi;
 
 
     final String[] names = {"Василий", "Александр", "Иван", "Ефрем", "Сергей", "Даниил", "Валерий", "Владислав"};
@@ -126,7 +107,6 @@ public class MapsActivity extends AppCompatActivity  implements OnMarkerClickLis
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        personApi = Controller.getApi();
 
         super.onCreate(savedInstanceState);
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "swheeldb").allowMainThreadQueries().build();

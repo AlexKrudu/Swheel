@@ -25,6 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
     private static Statement stmt;
     private static ResultSet rs;
 
+    public static PersonApi personApi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,19 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void submittionClick(View v)
     {
+        RegistrationSend registrationSend = new RegistrationSend();
+
+        registrationSend.setDate(1);
+        registrationSend.setLogin("1");
+        registrationSend.setMonth(1);
+        registrationSend.setName("1");
+        registrationSend.setPassword("1");
+        registrationSend.setSex(1);
+        registrationSend.setSurname("1");
+        registrationSend.setYear(1);
+
+        personApi = Controller.getApi();
+
         AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "swheeldb").allowMainThreadQueries().build();
         PersonDao personDao = db.personDao();
         Person person = new Person();

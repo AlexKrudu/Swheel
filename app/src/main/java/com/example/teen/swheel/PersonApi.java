@@ -3,13 +3,14 @@ package com.example.teen.swheel;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface PersonApi {
-    @POST("/api/get")
-    Call<List<RegistrationResp>> getData(@Query("name") String resourceName, @Query("num") int count);
+    @POST("/register")
+    Call<List<RegistrationResp>> registerUser(@Body RegistrationSend registrationSend);
     @GET("/api/get")
     Call<List<RegistrationSend>> getData1(@Query("name") String resourceName, @Query("num") int count);
     @GET("/api/get")
